@@ -51,14 +51,11 @@ pip install -r requirements.txt
 ## ⚙️ Configuration
 
 ### Camera Setup
-By default, the application is configured to use a **DroidCam IP camera**. You may need to change this to your local webcam.
+By default, the application is configured to use a camera source. You may need to change this to your local webcam or your own IP camera.
 
 1. Open `app.py`.
-2. Locate the line:
-   ```python
-   source = "http://192.168.29.167:4747/video"
-   ```
-3. Change it to `0` for your default local webcam, or update the IP address to your own camera's stream URL.
+2. Locate the `source` variable.
+3. Set it to `0` for your default local webcam, or update it with your IP camera's stream URL (e.g., `"http://192.168.x.x:4747/video"`).
    ```python
    source = 0  # For local webcam
    ```
