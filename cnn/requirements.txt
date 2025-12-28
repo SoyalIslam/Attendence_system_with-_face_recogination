@@ -1,0 +1,9 @@
+ultralytics
+facenet-pytorch
+opencv-python
+numpy
+torch
+torchvision
+flask
+pandas
+openpyxl
