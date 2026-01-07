@@ -1,0 +1,135 @@
+body { 
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #fff;
+}
+
+.glass-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    margin-bottom: 20px;
+}
+.glass-header {
+    background: rgba(255, 255, 255, 0.15);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    color: white;
+    border-radius: 15px 15px 0 0 !important;
+    padding: 15px;
+    font-weight: 600;
+}
+.card-body { padding: 20px; }
+
+.btn-glass {
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(5px);
+    color: white;
+    transition: all 0.3s ease;
+}
+.btn-glass:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    color: white;
+}
+.btn-glass-light {
+    background: rgba(255, 255, 255, 0.2);
+}
+.btn-glass-light:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+.btn-glass-success {
+    background: rgba(40, 167, 69, 0.4);
+    border-color: rgba(40, 167, 69, 0.6);
+}
+.btn-glass-success:hover {
+    background: rgba(40, 167, 69, 0.6);
+}
+.btn-glass-danger {
+    background: rgba(220, 53, 69, 0.4);
+    border-color: rgba(220, 53, 69, 0.6);
+}
+.btn-glass-danger:hover {
+    background: rgba(220, 53, 69, 0.6);
+}
+
+.video-container { 
+    position: relative; 
+    width: 100%; 
+    max-width: 640px; 
+    margin: auto; 
+    min-height: 360px;
+    background: rgba(0,0,0,0.2);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px dashed rgba(255,255,255,0.3);
+}
+.video-feed { 
+    width: 100%; 
+    border-radius: 10px; 
+    border: 2px solid rgba(255,255,255,0.3); 
+    display: none; 
+}
+
+.log-container { max-height: 400px; overflow-y: auto; }
+
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: rgba(255,255,255,0.1); }
+::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.3); border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(255,255,255,0.5); }
+
+.form-control {
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: white;
+}
+.form-control:focus {
+    background: rgba(255, 255, 255, 0.3);
+    color: white;
+    box-shadow: none;
+    border-color: rgba(255, 255, 255, 0.5);
+}
+.form-control::placeholder { color: rgba(255, 255, 255, 0.7); }
+
+.btn-primary {
+    background: rgba(0, 123, 255, 0.6);
+    border: 1px solid rgba(0, 123, 255, 0.4);
+    backdrop-filter: blur(5px);
+}
+.btn-primary:hover { background: rgba(0, 123, 255, 0.8); }
+
+.table { color: white; margin-bottom: 0; }
+.table-striped > tbody > tr:nth-of-type(odd) > * {
+    background-color: rgba(255,255,255,0.05);
+    color: white;
+}
+.table-hover > tbody > tr:hover > * {
+    background-color: rgba(255,255,255,0.1);
+    color: white;
+}
+.table thead th {
+    background-color: rgba(0,0,0,0.3);
+    color: white;
+    border-bottom: none;
+}
+td, th { border-color: rgba(255,255,255,0.1) !important; }
+
+.status-toast {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1050;
+    min-width: 300px;
+    display: none;
+    backdrop-filter: blur(10px);
+    background: rgba(40, 167, 69, 0.8);
+    color: white;
+    border: 1px solid rgba(255,255,255,0.2);
+}
+.status-toast.warning { background: rgba(255, 193, 7, 0.8); color: black; }
+.status-toast.danger { background: rgba(220, 53, 69, 0.8); }

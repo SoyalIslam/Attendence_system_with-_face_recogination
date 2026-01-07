@@ -9,8 +9,7 @@ from test import FaceAttendanceSystem
 app = Flask(__name__)
 
 system = FaceAttendanceSystem()
-#source = 0
-source = "http://192.168.29.167:4747/video"
+source = 0
 cap = None
 lock = threading.Lock()
 camera_active = False
@@ -90,11 +89,11 @@ def get_logs():
     if os.path.exists(log_file):
         try:
             df = pd.read_csv(log_file)
-            # Ensure columns exist
+        
             expected_cols = ['Name', 'Date', 'EntryTime', 'ExitTime']
             for col in expected_cols:
                 if col not in df.columns:
-                    df[col] = "" # Fill missing columns
+                    df[col] = "" 
             
             df = df.fillna('')
             return jsonify(df.to_dict(orient='records'))

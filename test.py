@@ -123,7 +123,7 @@ class FaceAttendanceSystem:
         
         for name, session in self.active_sessions.items():
             if (now - session['last_seen']).total_seconds() > self.EXIT_THRESHOLD:
-                exit_time_str = session['last_seen'].strftime("%H:%M:%S") # Use last seen as exit time
+                exit_time_str = session['last_seen'].strftime("%H:%M:%S")
                 self.log_exit(name, exit_time_str)
                 to_remove.append(name)
                 print(f"Exit detected: {name}")
